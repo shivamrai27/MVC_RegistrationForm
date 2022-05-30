@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>Bhk bsdk</h1>
+<h1>Something went wrong</h1>
 </body>
 </html>
