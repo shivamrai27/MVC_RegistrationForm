@@ -7,10 +7,12 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.DAO.RegisterDAO;
 import com.Db.ConnectionProvider;
 import com.entity.Student;
+import com.mysql.cj.Session;
 
 @WebServlet("/RegisterServlet")
 public class RegisterServlet extends HttpServlet {
@@ -37,10 +39,14 @@ public class RegisterServlet extends HttpServlet {
 		RegisterDAO dao = new RegisterDAO(ConnectionProvider.getConnection());
 		
 		 boolean f = dao.studentRegister(obj);
+		 HttpSession session = req.getSession();
 		 if(f) {
-			 resp.sendRedirect("login.jsp");
+			 
+			 session.setAttribute("suc","Registration successful....");
+			 resp.sendRedirect("index.jsp");
 		 }else {
-			resp.sendRedirect("error.jsp ");
+			 session.setAttribute("error","something went wrong on server....");
+			resp.sendRedirect("index.jsp ");
 		}
 	}
 }

@@ -42,7 +42,7 @@
 				<li class="nav-item active"><a class="nav-link" href="#">Home
 						<span class="sr-only">(current)</span>
 				</a></li>
-				<li class="nav-item"><a class="nav-link" href="Regis.jsp">Register</a></li>
+				<li class="nav-item"><a class="nav-link" href="index.jsp">Register</a></li>
 
 
 			</ul>
@@ -67,23 +67,43 @@
 						<h4 class="text-center text-warning">REGISTER HERE</h4>
 					</div>
 					<div class="card-body">
+					
+					<%
+					String sucmsg = (String)session.getAttribute("suc");
+					String errormsg =(String)session.getAttribute("error");
+					if(sucmsg!=null)
+					{%>
+						<h5 class="text-success text-center"><%=sucmsg %></h5>
+						
+					<%
+					session.removeAttribute("suc");
+					}
+					
+					if(errormsg!=null)
+					{%>
+						<h5 class="text-danger text-center"><%=errormsg %></h5>
+					<%}
+					session.removeAttribute("error");
+					%>
+					
+					
 						<form action="RegisterServlet" method="POST">
 							<div class="form-group">
 								<label for="exampleInputEmail1">Name</label> <input name ="name" type="text"
 									class="form-control" id="exampleInputEmail1"
-									aria-describedby="emailHelp" placeholder="Enter Full Name">
+									aria-describedby="emailHelp" required="required" >
 
 							</div>
 							<div class="form-group">
 								<label for="exampleInputEmail1">Email</label> <input name="email"
 									type="email" class="form-control" id="exampleInputEmail1"
-									aria-describedby="emailHelp" placeholder="Enter email">
+									aria-describedby="emailHelp" required="required">
 
 							</div>
 							<div class="form-group">
 								<label for="exampleInputEmail1">DoB</label> <input name ="dob"type="date"
 									class="form-control" id="exampleInputEmail1"
-									aria-describedby="emailHelp" placeholder="Enter email">
+									aria-describedby="emailHelp" required="required">
 
 							</div>
 							<div class="form-group">
@@ -93,7 +113,7 @@
 							<div class="form-group">
 								<label for="exampleInputEmail1">PhoneNo.</label> <input name ="phone"
 									type="text" class="form-control" id="exampleInputEmail1"
-									aria-describedby="emailHelp" placeholder="Enter Phone No">
+									aria-describedby="emailHelp" required="required">
 							</div>
 							<div class="form-check">
 								<input class="form-check-input" name ="gender" type="radio"
@@ -110,7 +130,7 @@
 							<div class="form-group">
 								<label for="exampleInputPassword1">Password</label> <input name ="password"
 									type="password" class="form-control" id="exampleInputPassword1"
-									placeholder="Password">
+									required="required">
 							</div>
 
 							<button type="submit" class="btn btn-primary">Submit</button>
