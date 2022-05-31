@@ -24,7 +24,7 @@ public class Student {
 //		this.phone = phone;
 //		this.gender = gender;
 //		this.password = password;
-//	}
+	//}
 
 	public int getId() {
 		return id;

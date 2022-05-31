@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<h2>Welcome</h2> 
+<h1>WELCOME</h1>
 
 </body>
 </html>

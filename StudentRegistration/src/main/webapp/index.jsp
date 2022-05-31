@@ -67,7 +67,7 @@
 						<h4 class="text-center text-warning">REGISTER HERE</h4>
 					</div>
 					<div class="card-body">
-						<form action="RegisterServle" method="POST">
+						<form action="RegisterServlet" method="POST">
 							<div class="form-group">
 								<label for="exampleInputEmail1">Name</label> <input name ="name" type="text"
 									class="form-control" id="exampleInputEmail1"

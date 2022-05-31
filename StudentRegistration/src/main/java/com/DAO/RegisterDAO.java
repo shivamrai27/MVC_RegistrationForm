@@ -14,7 +14,7 @@ public class RegisterDAO {
 	public boolean studentRegister(Student st) {
 		boolean f = false;
 		try {
-			String sql = "insert into table student (name,email,dob,address,phone,gender,password)values(?,?,?,?,?,?,?)";
+			String sql = "insert into student (name,email,dob,address,phone,gender,password)values(?,?,?,?,?,?,?)";
 			PreparedStatement ps = conn.prepareStatement(sql);
 			ps.setString(1,st.getName());
 			ps.setString(2, st.getEmail());

@@ -12,7 +12,7 @@ import com.DAO.RegisterDAO;
 import com.Db.ConnectionProvider;
 import com.entity.Student;
 
-@WebServlet("/RegisterServle")
+@WebServlet("/RegisterServlet")
 public class RegisterServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
