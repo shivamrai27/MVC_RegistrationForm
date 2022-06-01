@@ -16,7 +16,7 @@
 	crossorigin="anonymous">
 <style>
 .bg-custom {
-	background-color: #6a1b9a
+	background-color: #1565c0 
 }
 
 .lag {
@@ -63,8 +63,8 @@
 		<div class="row">
 			<div class="col-md-4 offset-md-4">
 				<div class="card">
-					<div class="card-header bg-secondary">
-						<h4 class="text-center text-warning">REGISTER HERE</h4>
+					<div class="card-header bg-success">
+						<h4 class="text-center text-light">REGISTER HERE</h4>
 					</div>
 					<div class="card-body">
 					
